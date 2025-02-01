@@ -1,0 +1,14 @@
+/* bugSolution.css */
+.container {
+  width: calc(50% - 20em); /*Inconsistent units*/
+}
+
+/*Fix: Convert em to px*/
+.container {
+  width: calc(50vw - (20 * 16px)); /* Assuming 1em = 16px */
+}
+
+/* Better practice: using only one unit type */
+.container {
+  width: calc(50% - 320px); 
+}
